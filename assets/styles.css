@@ -1,0 +1,41 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background: black url(bground.png) center center no-repeat;
+    background-size: cover;
+  
+}
+
+body *{
+    font-family: Trirong;
+}
+
+h1, h2,h3, h4, h5{
+    margin: 0;
+
+}
+
+a, a:hover, a:visited{
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 30px
+}
+
+.header{
+    background-color: #0f121f;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+}
+
+nav{
+    justify-self: end;
+}
+
+nav li{
+    display: inline-block;
+    margin-left: 20px;
+}
