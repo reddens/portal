@@ -13,7 +13,7 @@ def signup_view(request):
             user = form.save()
             #log user in
             login(request, user)
-            return redirect('home')
+            return redirect('prospects:dashboard')
     else:
         form = UserCreationForm()
     return render(request, 'accounts/signup.html/', {'form': form})
@@ -27,7 +27,7 @@ def login_view(request):
             if 'next' in request.POST:
                 return redirect(request.POST.get('next'))
             else:
-                return redirect('portal:home')
+                return redirect('prospects:dashboard')
     else:
         form = AuthenticationForm()
     return render(request, 'accounts/login.html', {'form': form})

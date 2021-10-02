@@ -1,0 +1,12 @@
+{% extends 'base_layout.html' %}
+{% block content %}
+    <div class="apply-student">
+        <h2>Register your child/ward to CradleHeight School</h2>
+        <form class="site-form" action="{% url 'prospects:apply' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Register">
+        </form>
+    </div>
+    <script src="/static/slugify.js"></script>
+{% endblock %}

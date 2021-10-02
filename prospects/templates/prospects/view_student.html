@@ -1,0 +1,12 @@
+{% extends 'base_layout.html' %}
+{% block content %}
+<div class="student-view">
+    <div class="student">
+        <img height="200px" src="{{ student.thumb.url }}" alt="image">
+        <h2>First Name: {{student.first_name}}</h2>
+        <h2>Last Name: {{student.last_name}}</h2>
+        <h2>Other Name: {{student.other_name}}</h2>
+        <p>Registered On: {{student.date}}</p>
+    </div>
+</div>
+{% endblock %}

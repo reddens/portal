@@ -11,7 +11,7 @@ def dashboard(request):
 @login_required(login_url="/accounts/login/")
 def apply(request):
     if request.method == 'POST':
-        form = forms.CreateArticle(request.POST, request.FILES)
+        form = forms.CreateStudent(request.POST, request.FILES)
         if form.is_valid():
             #save student to db
             instance = form.save(commit=False)
@@ -19,6 +19,15 @@ def apply(request):
             instance.save()
             return redirect('home')
 
-        else: 
-            form = forms.CreateArticle()
-            return render(request, 'prospects/apply.html', {'form': form})
+    else: 
+        form = forms.CreateStudent()
+        return render(request, 'prospects/apply.html', {'form': form})
+
+def dashboard(request):
+    students = Student.objects.all().order_by('date')
+    return render(request, 'prospects/dashboard.html', {'students':students})
+
+def view_student(request, slug):
+    #return HttpResponse(slug)
+    student = Student.objects.get(slug=slug)
+    return render(request, 'prospects/view_student.html', {'student':student})
