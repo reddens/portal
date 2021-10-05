@@ -2,8 +2,48 @@
 {% block content %}
     <div class="apply-student">
         <h2>Register your child/ward to CradleHeight School</h2>
+        <p>Please fill all details correctly</p>
         <form class="site-form" action="{% url 'prospects:apply' %}" method="post" enctype="multipart/form-data">
         {% csrf_token %}
+        <h3>PUPIL INFORMATION</h3>
+        <br>
+        <label for="first_name">FIRST NAME</label>
+        <input type="text" id="first_name" name="first_name" required>
+        <label for="last_name">SURNAME</label>
+        <input type="text" id="last_name" name="last_name" required>
+        <label for="other_name">OTHER NAMES</label>
+        <input type="text" id="other_name" name="other_name" required>
+        <label for="dob">DATE OF BIRTH</label>
+        <input type="date" id="dob" name="dob" required>
+        <label for="state_of_origin">STATE OF ORIGIN</label>
+        <input type="text" id="state_of_origin" name="state_of_origin">
+        <label for="previous">PREVIOUS SCHOOL ATTENDED</label>
+        <input type="text" id="previous" name="previous" required>
+        <label for="medical">MEDICAL CONDITIONS?</label>
+        <input type="text" id="medical" name="medical" required>
+        <label for="qualification">QUALIFICATION OBTAINED</label>
+        <input type="text" id="qualification" name="qualification" required>
+        <label for="reason">REASON FOR LEAVING PREVIOUS SCHOOL</label>
+        <input type="text" id="reason" name="reason" required>
+        <label for="class_seeked">CLASS YOU SEEK ADMISSION INTO</label>
+        <input type="text" id="class_seeked" name="class_seeked" required>
+        <br>
+        <h3>PARENT/GUARDIAN INFORMATION</h3>
+        <br>
+        <label for="guardian_fname">NAME OF PARENT/GUARDIAN</label>
+        <input type="text" id="guardian_fname" name="guardian_fname" required>
+        <label for="guardian_address">PERMANENT ADDRESS</label>
+        <input type="text" id="guardian_address" name="guardian_address" required>
+        <label for="guardian_state">STATE OF ORIGIN</label>
+        <input type="text" id="guardian_state" name="guardian_state" required>
+        <label for="guardian_lga">LGA</label>
+        <input type="text" id="guardian_lga" name="guardian_lga" required>
+        <label for="responsible_party">WHOSE RESPONSIBILITY IS IT TO PICK UP WARD?</label>
+        <input type="text" id="responsible_party" name="responsible_party" required>
+        <label for="doctor">FAMILY DOCTOR/CLINIC</label>
+        <input type="text" id="doctor" name="doctor" required>
+        <label for="phone">PARENT'S GSM NUMBER</label>
+        <input type="number" id="phone" name="phone" required>
         {{ form }}
         <input type="submit" value="Register">
         </form>

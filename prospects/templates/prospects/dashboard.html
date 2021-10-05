@@ -1,20 +1,16 @@
 {% extends 'base_layout.html' %}
 {% block content %}
-    <h1>Registered Students</h1>
+    <h1>Registered Students:</h1>
     <br>
     <div class="students">
         {% for student in students %}
         {% if student.guardian == request.user %}
         <div class="student">
             <h2>
-                <a href="{% url 'prospects:view' slug=student.slug %}">{{student.first_name}} {{student.last_name}}</a>
+                <a href="{% url 'prospects:view' slug=student.slug %}">{{student.first_name}} {{student.last_name}} - {{student.status}}</a>
             </h2>
             <p>{{student.snippet}}</p>
             <p>{{student.date}}</p>
-        </div>
-        {% else %}
-        <div>
-            <h2>You have not registered a student</h2>
         </div>
         {% endif %}
         {% endfor %}

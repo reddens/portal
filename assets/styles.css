@@ -13,8 +13,8 @@ body *{
 }
 
 h1, h2,h3, h4, h5{
+    font-weight: normal;
     margin: 0;
-
 }
 
 a, a:hover, a:visited{
@@ -31,6 +31,23 @@ a, a:hover, a:visited{
     font-size: 30px;
 }
 
+.wrapper{
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+div.wrapper h1{
+    text-align: center;
+    margin: 100px auto;
+    font-size: 2.4em;
+}
+
+header{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px 0;
+}
+
 nav{
     justify-self: end;
 }
@@ -38,4 +55,100 @@ nav{
 nav li{
     display: inline-block;
     margin-left: 20px;
+}
+
+nav button{
+    background: none;
+    color: white;
+    cursor: pointer;
+    border: 0;
+    font-size: 2em;
+}
+
+.students{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
+}
+
+.student{
+    padding: 10px;
+    border: 1px solid rgb(67, 67, 248);
+    background-color: black;
+    position: relative;
+    padding-bottom: 40px;
+}
+
+.student h2, .student h3{
+    font-size: 1.2em;
+}
+
+.student a{
+    color: rgb(67, 67, 248);
+}
+
+.view-student .student{
+    padding: 0;
+}
+
+.view-student .student img{
+    max-width: 100%
+}
+
+.view-student .student h2{
+    text-align: center;
+    margin: 20px auto;
+    font-size: 2em;
+}
+
+.view-student .student p{
+    text-align: center;
+}
+
+.site-form{
+    margin-top: 60px;
+    border: 1px solid rgb(67, 67, 248);
+    padding: 20px;
+    background-color: black;
+}
+
+.site-form input, .site-form textarea{
+    display: block;
+    margin: 20px 0 0 0;
+    padding: 10px;
+}
+
+a.highlight{
+    border: 1px solid rgb(67, 67, 248);
+    padding: 10px;
+    border-radius: 4px;
+    color: rgb(67, 67, 248);
+}
+
+.helptext, .helptext ul{
+    margin: 0 auto 20px;
+    color: #bbb;
+    font-size: 1em;
+    display: block;
+}
+
+.errorlist li{
+    padding: 10px;
+    list-style: none;
+    border: 1px solid #ff5722;
+    color: #ff5722;
+    margin: 10px 0;
+}
+
+.errorlist{
+    padding: 0;
+}
+
+.site-form input[type="submit"]{
+    background:rgb(67, 67, 248);
+    border: 0;
+    color: white;
+    font-size: 1.2em;
+    border-radius: 4px;
+    margin: 10px 0;
 }
